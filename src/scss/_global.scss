@@ -1,0 +1,136 @@
+body,
+html {
+  height: 100%;
+}
+
+.page {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+.page__body {
+  position: relative;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 12px;
+  color: #9564aa;
+}
+
+//Класс, для того, чтоб страница не скроллилась после открытия меню
+.hidden {
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.main {
+  position: relative;
+  flex-grow: 1;
+  &::before {
+  }
+}
+.parallax-box {
+  position: absolute;
+  display: none;
+  background-repeat: no-repeat;
+  z-index: 4;
+  transition: transform 0.5s linear;
+}
+.parallax-box-left {
+  top: 145px;
+  left: 0px;
+  background-image: url("../img/right-pattern.png");
+  background-size: 527px 482px;
+  background-position: bottom right;
+  width: 428px;
+  height: 544px;
+}
+.parallax-box-right {
+  position: absolute;
+  top: 81px;
+  right: -100px;
+  background-image: url("../img/left-pattern.png");
+  background-size: 428px 544px;
+  background-position: top left;
+  width: 485px;
+  height: 513px;
+}
+
+.container {
+  max-width: 1210px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--black);
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
+.main__box {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 15px;
+}

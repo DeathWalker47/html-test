@@ -1,0 +1,78 @@
+.aside {
+  position: absolute;
+  transform: translateX(-120%);
+  display: block;
+  width: 100%;
+  max-width: 270px;
+  height: 100%;
+  border: 2px solid rgba(149, 100, 170, 0.2);
+  border-radius: 10px;
+  padding: 18px;
+  transition: 0.2s;
+  background: #f4f0f7;
+  z-index: 3;
+  &--active {
+    transform: translateX(0%);
+    left: 0;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba($color: #9564aa, $alpha: 0.2);
+  }
+  &__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  &__avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__top-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  &__nick {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--black);
+  }
+  &__status {
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-align: center;
+    background: #684677;
+    font-weight: 400;
+    font-size: 10px;
+    color: var(--white);
+    text-transform: uppercase;
+  }
+}
+.aside-list {
+  display: flex;
+  padding-left: 12px;
+  flex-direction: column;
+  gap: 25px;
+  &__item {
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--black);
+  }
+  &__icon {
+    padding-right: 30px;
+  }
+  &__img {
+  }
+}
